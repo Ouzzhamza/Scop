@@ -1,0 +1,5 @@
+*.DS_Store
+scop
+*objects
+*~.nib
+*.o
