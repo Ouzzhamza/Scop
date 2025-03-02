@@ -18,7 +18,10 @@ CC		= c++
 SRC_DIR = src/
 OBJ_DIR = objects/
 
-SRC = scop
+SRC =  scop \
+	  glfw \
+	  render \
+	  keyPress \
 
 SRCS	= $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC)))
 OBJS	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
@@ -37,7 +40,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 
 clean:
 	@echo "$(YELLOW)Cleaning...$(COLOR_END)"
-	@$(RM) $(OBJ_DIR)
+	@$(RM) $(OBJ_DIR) glad.o
 	@echo "$(GREEN)Cleaning done.$(COLOR_END)"
 
 
